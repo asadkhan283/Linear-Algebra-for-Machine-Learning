@@ -1,22 +1,22 @@
 /* ==========================================================================
-   Premium Academic 3D HD Dark Theme — Deep Cyber Purple Edition
+   Premium Academic 3D HD Light Theme — Light Purple & Pastel Orchid Edition
    ========================================================================== */
 :root {
-    /* Main Dark Theme Canvas */
-    --primary-bg: #070512;          /* Ultra-deep digital cosmic obsidian purple */
-    --primary-color: #110d26;       /* Amethyst-toned dark slate backing core */
-    --accent-color: #a855f7;        /* High-Definition vibrant neon violet highlight */
-    --accent-purple: #f472b6;       /* Secondary luminous magenta/orchid glow layer */
-    --text-color: #fae8ff;          /* High-visibility clean crisp orchid-white */
-    --text-muted: #d8b4fe;         /* Subdued academic soft purple reading text */
-    --border-color: rgba(168, 85, 247, 0.15);
+    /* Main Light Theme Canvas */
+    --primary-bg: #f9f8fc;          /* Crisp clean lavender-white cream base */
+    --primary-color: #ffffff;       /* Solid pristine white container core */
+    --accent-color: #8b5cf6;        /* Bright professional light violet highlight */
+    --accent-purple: #c084fc;       /* Secondary soft pastel orchid accent layer */
+    --text-color: #2e1065;          /* Ultra-dark royal amethyst for high text contrast */
+    --text-muted: #6d28d9;         /* Sophisticated deep violet for secondary text */
+    --border-color: rgba(139, 92, 246, 0.12);
     --white: #ffffff;
     
     /* 3D Glassmorphism HD Layers */
-    --glass-bg: rgba(17, 13, 38, 0.7);
-    --glass-border: rgba(168, 85, 247, 0.08);
-    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    --neon-glow: 0 0 20px rgba(168, 85, 247, 0.25);
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(139, 92, 246, 0.08);
+    --glass-shadow: 0 15px 35px rgba(46, 16, 101, 0.04);
+    --neon-glow: 0 0 20px rgba(139, 92, 246, 0.15);
 }
 
 /* Base Reset & Smooth 3D Layering */
@@ -40,16 +40,16 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     
-    /* Highly attractive fluid shifting deep purple ambient aura lights */
+    /* Highly attractive fluid shifting pastel purple ambient aura lights */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.1) 0px, transparent 45%),
-        radial-gradient(at 100% 100%, rgba(244, 114, 182, 0.06) 0px, transparent 40%),
-        radial-gradient(at 50% 50%, rgba(17, 13, 38, 0.6) 0px, transparent 60%);
+        radial-gradient(at 0% 0%, rgba(192, 132, 252, 0.15) 0px, transparent 45%),
+        radial-gradient(at 100% 100%, rgba(232, 121, 249, 0.1) 0px, transparent 40%),
+        radial-gradient(at 50% 50%, rgba(249, 248, 252, 0.5) 0px, transparent 60%);
     background-size: 200% 200%;
-    animation: purpleAuraMovement 20s ease-in-out infinite alternate;
+    animation: lightPurpleAura 20s ease-in-out infinite alternate;
 }
 
-@keyframes purpleAuraMovement {
+@keyframes lightPurpleAura {
     0% { background-position: 0% 20%; }
     50% { background-position: 100% 80%; }
     100% { background-position: 20% 50%; }
@@ -73,17 +73,17 @@ body {
 }
 
 /* ==========================================================================
-   Header Navigation Dashboard (Cyber Glassmorphism Layer)
+   Header Navigation Dashboard (Frosted Glass Layer)
    ========================================================================== */
 .site-header {
-    background-color: rgba(7, 5, 18, 0.8);
+    background-color: rgba(249, 248, 252, 0.8);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(46, 16, 101, 0.03);
 }
 
 .header-container {
@@ -103,7 +103,7 @@ body {
 
 .avatar-badge {
     background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
-    color: #070512;
+    color: var(--white);
     font-weight: 800;
     width: 44px;
     height: 44px;
@@ -114,15 +114,13 @@ body {
     box-shadow: var(--neon-glow);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .faculty-name {
     font-weight: 700;
     font-size: 1.15rem;
-    color: var(--white);
+    color: var(--text-color);
     letter-spacing: -0.3px;
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 .main-nav ul {
@@ -133,7 +131,7 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: #6b21a8;
     font-size: 0.95rem;
     font-weight: 600;
     padding: 6px 0;
@@ -143,7 +141,7 @@ body {
 
 .main-nav a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
 }
 
 .main-nav a::after {
@@ -173,14 +171,14 @@ body {
 
 .section h2 {
     font-size: 2rem;
-    color: var(--white);
+    color: var(--text-color);
     letter-spacing: -0.5px;
     margin-bottom: 6px;
     font-weight: 800;
 }
 
 .section-subtitle {
-    color: var(--text-muted);
+    color: #5b21b6;
     margin-bottom: 35px;
     font-size: 1.05rem;
 }
@@ -193,12 +191,12 @@ body {
 
 .hero-section h1 {
     font-size: 3.5rem;
-    color: var(--white);
+    color: var(--text-color);
     letter-spacing: -1.5px;
     line-height: 1.15;
     margin-bottom: 12px;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--white) 50%, var(--text-muted) 100%);
+    background: linear-gradient(135deg, var(--text-color) 60%, var(--text-muted) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -208,7 +206,6 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
-    text-shadow: 0 0 12px rgba(168, 85, 247, 0.2);
 }
 
 .department {
@@ -218,10 +215,10 @@ body {
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(168, 85, 247, 0.08);
+    background: rgba(139, 92, 246, 0.06);
     padding: 6px 16px;
     border-radius: 20px;
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.15);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -229,7 +226,7 @@ body {
 .hero-description {
     max-width: 760px;
     font-size: 1.2rem;
-    color: #cbd5e1;
+    color: #4c1d95;
     margin-bottom: 40px;
     line-height: 1.75;
 }
@@ -250,29 +247,28 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #7e22ce, var(--accent-color));
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.25);
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.4);
-    filter: brightness(1.1);
+    box-shadow: 0 10px 25px rgba(192, 132, 252, 0.4);
+    filter: brightness(1.05);
 }
 
 .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.02);
-    color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
 }
 
 .btn-secondary:hover {
-    background-color: rgba(168, 85, 247, 0.05);
+    background-color: rgba(139, 92, 246, 0.03);
     border-color: var(--accent-color);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================================================
@@ -294,15 +290,15 @@ body {
 
 .matrix-card:hover {
     transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
-    border-color: rgba(168, 85, 247, 0.25);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.1);
+    border-color: rgba(139, 92, 246, 0.2);
+    box-shadow: 0 20px 40px rgba(46, 16, 101, 0.06);
 }
 
 .matrix-card h3 {
-    color: var(--white);
+    color: var(--text-color);
     font-size: 1.4rem;
     margin-bottom: 24px;
-    border-bottom: 2px solid rgba(168, 85, 247, 0.2);
+    border-bottom: 2px solid rgba(139, 92, 246, 0.1);
     padding-bottom: 12px;
 }
 
@@ -315,28 +311,27 @@ body {
 
 .specialties-list li {
     padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.01);
+    background: var(--white);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.06);
     font-weight: 600;
-    color: #cbd5e1;
+    color: #4c1d95;
     display: flex;
     align-items: center;
     gap: 12px;
     transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
 }
 
 .specialties-list li::before {
-    content: "⚡";
-    color: var(--accent-color);
+    content: "🔮";
     font-size: 0.9rem;
-    text-shadow: 0 0 8px var(--accent-color);
 }
 
 .specialties-list li:hover {
     border-color: var(--accent-color);
-    background: rgba(168, 85, 247, 0.04);
-    color: var(--white);
+    background: rgba(139, 92, 246, 0.02);
+    color: var(--accent-color);
     transform: translateX(6px);
 }
 
@@ -350,12 +345,13 @@ body {
 }
 
 .countdown-block {
-    background: rgba(17, 13, 38, 0.5); 
+    background: var(--white); 
     border: 1px solid var(--glass-border);
     border-radius: 10px; 
     padding: 15px; 
     min-width: 80px; 
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
 }
 
 .countdown-block span { 
@@ -364,10 +360,23 @@ body {
     font-weight: 800; 
     color: var(--accent-color); 
     font-family: monospace; 
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.2); 
 }
 
 .countdown-block label { 
     font-size: 0.7rem; 
     color: var(--text-muted); 
     text-transform: uppercase; 
+    font-weight: 700; 
+}
+
+.form-group { 
+    margin-bottom: 18px; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.form-group label { 
+    font-weight: 700; 
+    margin-bottom: 8px; 
+    font-size: 0.85rem; 
+    color: #6d28d9; 

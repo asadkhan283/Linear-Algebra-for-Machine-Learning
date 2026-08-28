@@ -1,21 +1,21 @@
 /* ==========================================================================
-   Official University Faculty Layout Specification — Crimson Heritage Theme
+   Official University Faculty Layout Specification — Authority & Prestige
    ========================================================================== */
 :root {
     /* Institutional Master Palette */
-    --primary-bg: #f8fafc;          /* High-clarity off-white ivory canvas */
-    --primary-color: #ffffff;       /* Solid pristine white structural cards */
-    --text-color: #1e293b;          /* Editorial slate charcoal for comfortable reading */
-    --text-muted: #64748b;         /* Subdued cool grey for meta descriptions */
-    --accent-color: #5c061c;        /* Prestigious academic burgundy/crimson core */
-    --accent-silver: #94a3b8;       /* Refined structural silver highlights */
-    --border-color: rgba(92, 6, 28, 0.08);
+    --primary-bg: #f8fafc;          /* High-clarity ivory/linen white backdrop */
+    --primary-color: #ffffff;       /* Pure white structural cards */
+    --text-color: #0f172a;          /* Deep imperial navy for absolute reading authority */
+    --text-muted: #475569;         /* Subdued slate grey for tertiary documentation */
+    --accent-color: #1e3a8a;        /* Varsity royal blue branding tone */
+    --accent-gold: #b45309;         /* Prestigious polished amber/gold action anchor */
+    --border-color: rgba(30, 58, 138, 0.08);
     --white: #ffffff;
     
     /* Executive Glassmorphic Profiles */
-    --glass-bg: rgba(255, 255, 255, 0.88);
-    --glass-border: rgba(92, 6, 28, 0.06);
-    --glass-shadow: 0 16px 36px rgba(30, 41, 59, 0.03);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(30, 58, 138, 0.06);
+    --glass-shadow: 0 16px 36px rgba(15, 23, 42, 0.03);
 }
 
 /* Structural Reset Matrix */
@@ -37,10 +37,10 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     
-    /* Subtle, premium crimson ambient backdrop glow simulation */
+    /* Subtle, prestigious ambient background glow simulation */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(92, 6, 28, 0.03) 0px, transparent 40%),
-        radial-gradient(at 100% 100%, rgba(148, 163, 184, 0.02) 0px, transparent 40%);
+        radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.03) 0px, transparent 40%),
+        radial-gradient(at 100% 100%, rgba(180, 83, 9, 0.02) 0px, transparent 40%);
 }
 
 #canvas-container {
@@ -63,14 +63,14 @@ body {
    Institutional Sticky Header Dashboard Navigation
    ========================================================================== */
 .site-header {
-    background-color: rgba(255, 255, 255, 0.88);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 2px solid rgba(92, 6, 28, 0.05);
+    border-bottom: 2px solid rgba(30, 58, 138, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(30, 41, 59, 0.02);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
 }
 
 .header-container {
@@ -89,7 +89,7 @@ body {
 }
 
 .avatar-badge {
-    background: linear-gradient(135deg, var(--accent-color), #2d030c);
+    background: linear-gradient(135deg, var(--accent-color), #0f172a);
     color: var(--white);
     font-weight: 700;
     width: 44px;
@@ -97,10 +97,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px; /* Architectural geometric crisp layout */
+    border-radius: 8px; /* Elegant geometric sharp squircle profile */
     font-size: 0.95rem;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 12px rgba(92, 6, 28, 0.15);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
 }
 
 .faculty-name {
@@ -137,7 +137,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: var(--accent-gold);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -193,14 +193,14 @@ body {
 .department {
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--accent-color);
+    color: var(--accent-gold);
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(92, 6, 28, 0.05);
+    background: rgba(180, 83, 9, 0.05);
     padding: 6px 16px;
     border-radius: 4px;
-    border: 1px solid rgba(92, 6, 28, 0.12);
+    border: 1px solid rgba(180, 83, 9, 0.15);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -230,13 +230,13 @@ body {
 .btn-primary {
     background: var(--accent-color);
     color: var(--white);
-    box-shadow: 0 4px 14px rgba(92, 6, 28, 0.2);
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.15);
 }
 
 .btn-primary:hover {
-    background: #2d030c;
+    background: #0f172a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(45, 3, 12, 0.25);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
 }
 
 .btn-secondary {
@@ -268,15 +268,15 @@ body {
 
 .matrix-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(92, 6, 28, 0.15);
-    box-shadow: 0 20px 40px rgba(30, 41, 59, 0.04);
+    border-color: rgba(30, 58, 138, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
 }
 
 .matrix-card h3 {
     color: var(--text-color);
     font-size: 1.4rem;
     margin-bottom: 24px;
-    border-bottom: 2px solid rgba(92, 6, 28, 0.1);
+    border-bottom: 2px solid rgba(30, 58, 138, 0.1);
     padding-bottom: 12px;
 }
 
@@ -300,8 +300,9 @@ body {
 }
 
 .specialties-list li::before {
-    content: "🔸";
-    font-size: 0.8rem;
+    content: "■";
+    color: var(--accent-gold);
+    font-size: 0.75rem;
     margin-right: 4px;
 }
 
@@ -328,7 +329,7 @@ input {
     padding: 14px; border: 1px solid #cbd5e1; border-radius: 6px;
     background: var(--white); color: var(--text-color); font-size: 1rem; outline: none; transition: all 0.2s;
 }
-input:focus { border-color: var(--accent-color); box-shadow: 0 0 12px rgba(92, 6, 28, 0.1); }
+input:focus { border-color: var(--accent-color); box-shadow: 0 0 12px rgba(30, 58, 138, 0.1); }
 
 .lecture-modules { display: flex; flex-direction: column; gap: 14px; }
 .lecture-card {
@@ -337,13 +338,13 @@ input:focus { border-color: var(--accent-color); box-shadow: 0 0 12px rgba(92, 6
     padding: 20px 24px; border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.01);
 }
-.lecture-card:hover { border-color: rgba(92, 6, 28, 0.15); }
+.lecture-card:hover { border-color: rgba(30, 58, 138, 0.15); }
 .lecture-tag {
-    background: rgba(92, 6, 28, 0.04); color: var(--accent-color);
+    background: rgba(30, 58, 138, 0.04); color: var(--accent-color);
     padding: 3px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
-    border: 1px solid rgba(92, 6, 28, 0.08);
+    border: 1px solid rgba(30, 58, 138, 0.08);
 }
 .lecture-card h4 { color: var(--text-color); font-size: 1.1rem; margin-top: 5px; font-weight: 600; }
 
 .btn-download {
-    text-decoration: none; font-size: 0.9rem; font-weight: 700; background: var(--accent-color);
+    text-decoration: none; font-size: 0.9rem; font-weight: 700; background: var(--accent-gold);

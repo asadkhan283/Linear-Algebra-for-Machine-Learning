@@ -1,22 +1,22 @@
 /* ==========================================================================
-   Premium Academic 3D HD Dark Theme Configuration Variables
+   Premium Academic 3D HD Dark Theme — Soft Gold Highlights Edition
    ========================================================================== */
 :root {
-    /* Main Dark Theme Matrix */
-    --primary-bg: #090d16;          /* Deep cosmic midnight canvas */
-    --primary-color: #0f172a;       /* Dark slate base */
-    --accent-color: #38bdf8;        /* Radiant HD cyber cyan glow */
-    --accent-purple: #818cf8;       /* Mathematical matrix indigo */
-    --text-color: #f1f5f9;          /* High-visibility clean silver white */
-    --text-muted: #94a3b8;         /* Subdued academic slate grey */
-    --border-color: rgba(56, 189, 248, 0.15);
+    /* Main Dark Theme Canvas */
+    --primary-bg: #0a0907;          /* Premium warm charcoal velvet base */
+    --primary-color: #14120e;       /* Deep obsidian luxury backing slate */
+    --accent-color: #d4af37;        /* Highly attractive crisp metallic gold */
+    --accent-purple: #c5a059;       /* Secondary soft brass highlight layer */
+    --text-color: #fcfaf2;          /* High-visibility warm ivory typography */
+    --text-muted: #a19a8e;         /* Subdued luxury antique silver reading text */
+    --border-color: rgba(212, 175, 55, 0.15);
     --white: #ffffff;
     
     /* 3D Glassmorphism HD Layers */
-    --glass-bg: rgba(15, 23, 42, 0.65);
-    --glass-border: rgba(255, 255, 255, 0.06);
-    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    --neon-glow: 0 0 20px rgba(56, 189, 248, 0.2);
+    --glass-bg: rgba(22, 20, 16, 0.7);
+    --glass-border: rgba(212, 175, 55, 0.06);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    --neon-glow: 0 0 20px rgba(212, 175, 55, 0.25);
 }
 
 /* Base Reset & Smooth 3D Layering */
@@ -39,13 +39,23 @@ body {
     line-height: 1.6;
     background-color: var(--primary-bg);
     overflow-x: hidden;
-    /* HD Ambient lighting simulation layers */
+    
+    /* Highly attractive moving soft gold dynamic aura gradient */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
-        radial-gradient(at 100% 0%, rgba(129, 140, 248, 0.05) 0px, transparent 40%);
+        radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.08) 0px, transparent 45%),
+        radial-gradient(at 100% 100%, rgba(154, 123, 54, 0.05) 0px, transparent 40%),
+        radial-gradient(at 50% 50%, rgba(22, 20, 16, 0.6) 0px, transparent 60%);
+    background-size: 200% 200%;
+    animation: goldAuraMovement 20s ease-in-out infinite alternate;
 }
 
-/* 3D Canvas Background Anchor (If utilizing Three.js) */
+@keyframes goldAuraMovement {
+    0% { background-position: 0% 20%; }
+    50% { background-position: 100% 80%; }
+    100% { background-position: 20% 50%; }
+}
+
+/* 3D Canvas Background Anchor */
 #canvas-container {
     position: fixed;
     top: 0;
@@ -66,7 +76,7 @@ body {
    Header Navigation Dashboard (Cyber Glassmorphism Layer)
    ========================================================================== */
 .site-header {
-    background-color: rgba(9, 13, 22, 0.7);
+    background-color: rgba(10, 9, 7, 0.8);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
@@ -92,9 +102,9 @@ body {
 }
 
 .avatar-badge {
-    background: linear-gradient(135deg, #0284c7, var(--accent-color));
-    color: var(--white);
-    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-color));
+    color: #14120e;
+    font-weight: 800;
     width: 44px;
     height: 44px;
     display: flex;
@@ -133,7 +143,7 @@ body {
 
 .main-nav a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
 }
 
 .main-nav a::after {
@@ -188,30 +198,30 @@ body {
     line-height: 1.15;
     margin-bottom: 12px;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--white) 30%, #94a3b8 100%);
+    background: linear-gradient(135deg, var(--white) 50%, var(--text-muted) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-section h2 {
-    font-size: 1.5rem;
     color: var(--accent-color);
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
-    text-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
 }
 
 .department {
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 0.85rem;
     color: var(--accent-color);
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(56, 189, 248, 0.08);
+    background: rgba(212, 175, 55, 0.06);
     padding: 6px 16px;
     border-radius: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -235,31 +245,31 @@ body {
     font-weight: 700;
     font-size: 0.95rem;
     margin-right: 15px;
-    perspective: 1000px; /* Prepares button area for 3D interactions */
+    perspective: 1000px; 
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #0284c7, #2563eb);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--accent-warm), var(--accent-color));
+    color: #14120e;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
-    background: linear-gradient(135deg, var(--accent-color), #3b82f6);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+    filter: brightness(1.1);
 }
 
 .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.02);
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(212, 175, 55, 0.05);
     border-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -276,7 +286,7 @@ body {
     border-radius: 20px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    transform: style 3d; /* Initiates hardware acceleration */
+    transform-style: preserve-3d; 
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
                 box-shadow 0.4s ease, 
                 border-color 0.4s ease;
@@ -284,15 +294,15 @@ body {
 
 .matrix-card:hover {
     transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
-    border-color: rgba(56, 189, 248, 0.3);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);
+    border-color: rgba(212, 175, 55, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.1);
 }
 
 .matrix-card h3 {
     color: var(--white);
     font-size: 1.4rem;
     margin-bottom: 24px;
-    border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
     padding-bottom: 12px;
 }
 
@@ -305,7 +315,7 @@ body {
 
 .specialties-list li {
     padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     font-weight: 600;
@@ -325,52 +335,43 @@ body {
 
 .specialties-list li:hover {
     border-color: var(--accent-color);
-    background: rgba(56, 189, 248, 0.04);
+    background: rgba(212, 175, 55, 0.04);
     color: var(--white);
     transform: translateX(6px);
 }
 
 /* ==========================================================================
-   Course Repositories & Modules Layout
+   Course Repositories, Countdown Timer & Custom Element Nodes
    ========================================================================== */
-.lecture-modules {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 24px;
+.countdown-container { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 20px; 
 }
 
-.lecture-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(15, 23, 42, 0.4);
+.countdown-block {
+    background: rgba(22, 20, 16, 0.5); 
     border: 1px solid var(--glass-border);
-    padding: 24px 30px;
-    border-radius: 16px;
-    box-shadow: var(--glass-shadow);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 10px; 
+    padding: 15px; 
+    min-width: 80px; 
+    text-align: center;
 }
 
-.lecture-card:hover {
-    border-color: rgba(129, 140, 248, 0.3);
-    background: rgba(15, 23, 42, 0.6);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3px);
+.countdown-block span { 
+    display: block; 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    color: var(--accent-color); 
+    font-family: monospace; 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.2); 
 }
 
-.lecture-tag {
-    background: rgba(129, 140, 248, 0.12);
-    color: var(--accent-purple);
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
-    display: inline-block;
-    margin-bottom: 10px;
-    border: 1px solid rgba(129, 140, 248, 0.15);
+.countdown-block label { 
+    font-size: 0.7rem; 
+    color: var(--text-muted); 
+    text-transform: uppercase; 
+    font-weight: 700; 
 }
 
-.lecture-card h4 {
+.form-group { 

@@ -1,27 +1,32 @@
 /* ==========================================================================
-   Premium Academic Typography & Theme Configuration Variables
+   Premium Academic 3D HD Dark Theme Configuration Variables
    ========================================================================== */
 :root {
-    /* Main Theme Matrix */
-    --primary-color: #0f172a;       /* Deep slate/midnight blue */
-    --accent-color: #3b82f6;        /* Radiant tech/scientific blue */
-    --text-color: #334155;          /* Sophisticated dark charcoal */
-    --light-bg: #f8fafc;            /* Clean light grey tint */
-    --border-color: rgba(226, 232, 240, 0.7);
+    /* Main Dark Theme Matrix */
+    --primary-bg: #090d16;          /* Deep cosmic midnight canvas */
+    --primary-color: #0f172a;       /* Dark slate base */
+    --accent-color: #38bdf8;        /* Radiant HD cyber cyan glow */
+    --accent-purple: #818cf8;       /* Mathematical matrix indigo */
+    --text-color: #f1f5f9;          /* High-visibility clean silver white */
+    --text-muted: #94a3b8;         /* Subdued academic slate grey */
+    --border-color: rgba(56, 189, 248, 0.15);
     --white: #ffffff;
     
-    /* Glassmorphism Configuration Layers */
-    --glass-bg: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(255, 255, 255, 0.6);
-    --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.04);
+    /* 3D Glassmorphism HD Layers */
+    --glass-bg: rgba(15, 23, 42, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    --neon-glow: 0 0 20px rgba(56, 189, 248, 0.2);
 }
 
-/* Base Reset & Smooth Anchoring Layout */
+/* Base Reset & Smooth 3D Layering */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.3s ease;
 }
 
 html {
@@ -29,13 +34,26 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--light-bg); /* Fluid transition container */
+    background-color: var(--primary-bg);
+    overflow-x: hidden;
+    /* HD Ambient lighting simulation layers */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.02) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
+        radial-gradient(at 100% 0%, rgba(129, 140, 248, 0.05) 0px, transparent 40%);
+}
+
+/* 3D Canvas Background Anchor (If utilizing Three.js) */
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
@@ -45,17 +63,17 @@ body {
 }
 
 /* ==========================================================================
-   Header Navigation Dashboard (Sticky Frosted Glass Layout)
+   Header Navigation Dashboard (Cyber Glassmorphism Layer)
    ========================================================================== */
 .site-header {
-    background-color: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(9, 13, 22, 0.7);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .header-container {
@@ -74,7 +92,7 @@ body {
 }
 
 .avatar-badge {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, #0284c7, var(--accent-color));
     color: var(--white);
     font-weight: 700;
     width: 44px;
@@ -82,17 +100,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px; /* Premium squircle aesthetic */
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    box-shadow: var(--neon-glow);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .faculty-name {
     font-weight: 700;
     font-size: 1.15rem;
-    color: var(--primary-color);
+    color: var(--white);
     letter-spacing: -0.3px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 .main-nav ul {
@@ -103,19 +123,19 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #64748b;
+    color: var(--text-muted);
     font-size: 0.95rem;
     font-weight: 600;
     padding: 6px 0;
     position: relative;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
 }
 
-/* Animated Hover Indicator Line under Nav links */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -124,7 +144,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -135,134 +155,144 @@ body {
 }
 
 /* ==========================================================================
-   Structural Section Base Design Layout Blocks
+   Structural 3D Depth Card Blocks
    ========================================================================== */
 .section {
     padding: 80px 0;
 }
 
 .section h2 {
-    font-size: 1.85rem;
-    color: var(--primary-color);
+    font-size: 2rem;
+    color: var(--white);
     letter-spacing: -0.5px;
     margin-bottom: 6px;
+    font-weight: 800;
 }
 
 .section-subtitle {
-    color: #64748b;
+    color: var(--text-muted);
     margin-bottom: 35px;
     font-size: 1.05rem;
 }
 
-/* Hero Frame Area (With subtle interactive dynamic lift) */
+/* Hero Display Frame */
 .hero-section {
-    background-color: transparent;
-    padding: 100px 0;
+    padding: 120px 0;
     position: relative;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    letter-spacing: -1px;
+    font-size: 3.5rem;
+    color: var(--white);
+    letter-spacing: -1.5px;
     line-height: 1.15;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--white) 30%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--accent-color);
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
 }
 
 .department {
     font-weight: 600;
-    font-size: 1.05rem;
-    color: #475569;
-    margin-bottom: 24px;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(59, 130, 246, 0.06);
-    padding: 4px 12px;
-    border-radius: 6px;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .hero-description {
     max-width: 760px;
-    font-size: 1.15rem;
-    color: #475569;
-    margin-bottom: 35px;
-    line-height: 1.7;
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    line-height: 1.75;
 }
 
 /* ==========================================================================
-   Button Matrices
+   HD Dynamic Control Matrices (Buttons)
    ========================================================================== */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     margin-right: 15px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    perspective: 1000px; /* Prepares button area for 3D interactions */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #0284c7, #2563eb);
     color: var(--white);
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+    background: linear-gradient(135deg, var(--accent-color), #3b82f6);
 }
 
 .btn-secondary {
-    background-color: var(--white);
-    color: var(--primary-color);
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary:hover {
-    background-color: var(--light-bg);
-    border-color: #94a3b8;
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================================================
-   Profile Matrix / Specialties Configurations
+   Profile Matrix / Specialties Grid (Hyper-3D Glassmorphic Cards)
    ========================================================================== */
-.matrix-section {
-    background-color: rgba(248, 250, 252, 0.6);
-}
-
 .matrix-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     padding: 40px;
-    border-radius: 16px;
+    border-radius: 20px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: style 3d; /* Initiates hardware acceleration */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
 }
 
 .matrix-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+    transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);
 }
 
 .matrix-card h3 {
-    color: var(--primary-color);
-    font-size: 1.35rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(59, 130, 246, 0.15);
+    color: var(--white);
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.2);
     padding-bottom: 12px;
 }
 
@@ -270,42 +300,43 @@ body {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 12px;
+    gap: 14px;
 }
 
 .specialties-list li {
-    padding: 14px 16px;
-    background: var(--white);
-    border-radius: 8px;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    font-weight: 500;
-    color: #475569;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    color: #cbd5e1;
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    gap: 12px;
+    transition: all 0.25s ease;
 }
 
-/* Bullet list icon decoration markup */
 .specialties-list li::before {
-    content: "◈";
+    content: "⚡";
     color: var(--accent-color);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 .specialties-list li:hover {
     border-color: var(--accent-color);
-    color: var(--primary-color);
-    transform: translateX(4px);
+    background: rgba(56, 189, 248, 0.04);
+    color: var(--white);
+    transform: translateX(6px);
 }
 
 /* ==========================================================================
-   Course Materials / Lecture Modules Architecture
+   Course Repositories & Modules Layout
    ========================================================================== */
 .lecture-modules {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
     margin-top: 24px;
 }
 
@@ -313,97 +344,33 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--white);
-    border: 1px solid var(--border-color);
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
-    transition: all 0.25s ease;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--glass-border);
+    padding: 24px 30px;
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .lecture-card:hover {
-    border-color: #cbd5e1;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-    transform: translateY(-2px);
+    border-color: rgba(129, 140, 248, 0.3);
+    background: rgba(15, 23, 42, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
 }
 
 .lecture-tag {
-    background: rgba(59, 130, 246, 0.08);
-    color: var(--accent-color);
-    padding: 4px 10px;
+    background: rgba(129, 140, 248, 0.12);
+    color: var(--accent-purple);
+    padding: 4px 12px;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.75px;
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(129, 140, 248, 0.15);
 }
 
 .lecture-card h4 {
-    color: var(--primary-color);
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: -0.2px;
-}
-
-.lecture-actions {
-    display: flex;
-    gap: 12px;
-}
-
-.btn-download, .btn-stream {
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-}
-
-.btn-download {
-    background-color: var(--primary-color);
-    color: var(--white);
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-}
-
-.btn-download:hover {
-    background-color: var(--accent-color);
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
-}
-
-.btn-stream {
-    background-color: #f1f5f9;
-    color: #475569;
-    border: 1px solid #e2e8f0;
-}
-
-.btn-stream:hover {
-    background-color: #e2e8f0;
-    color: var(--primary-color);
-}
-
-/* ==========================================================================
-   Footer & Responsive Structural Media Breakpoints
-   ========================================================================== */
-.site-footer {
-    background: var(--primary-color);
-    color: #94a3b8;
-    text-align: center;
-    padding: 40px 0;
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.site-footer p {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Responsive Viewports Optimization */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;

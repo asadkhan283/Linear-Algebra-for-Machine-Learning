@@ -1,40 +1,61 @@
-/* Variables */
+/* ==========================================================================
+   Premium Academic Typography & Theme Configuration Variables
+   ========================================================================== */
 :root {
-    --primary-color: #1a365d;
-    --accent-color: #2b6cb0;
-    --text-color: #2d3748;
-    --light-bg: #f7fafc;
-    --border-color: #e2e8f0;
+    /* Main Theme Matrix */
+    --primary-color: #0f172a;       /* Deep slate/midnight blue */
+    --accent-color: #3b82f6;        /* Radiant tech/scientific blue */
+    --text-color: #334155;          /* Sophisticated dark charcoal */
+    --light-bg: #f8fafc;            /* Clean light grey tint */
+    --border-color: rgba(226, 232, 240, 0.7);
     --white: #ffffff;
+    
+    /* Glassmorphism Configuration Layers */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.04);
 }
 
-/* Reset */
+/* Base Reset & Smooth Anchoring Layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--white);
+    background-color: var(--light-bg); /* Fluid transition container */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.02) 0px, transparent 50%);
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
-/* Header & Nav */
+/* ==========================================================================
+   Header Navigation Dashboard (Sticky Frosted Glass Layout)
+   ========================================================================== */
 .site-header {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
 }
 
 .header-container {
@@ -43,162 +64,249 @@ body {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 16px 24px;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .avatar-badge {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
+    font-weight: 700;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
-    center: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px; /* Premium squircle aesthetic */
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
 .faculty-name {
     font-weight: 700;
+    font-size: 1.15rem;
     color: var(--primary-color);
+    letter-spacing: -0.3px;
 }
 
 .main-nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 24px;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #64748b;
     font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-weight: 600;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
-/* Sections */
+/* Animated Hover Indicator Line under Nav links */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ==========================================================================
+   Structural Section Base Design Layout Blocks
+   ========================================================================== */
 .section {
-    padding: 60px 0;
+    padding: 80px 0;
+}
+
+.section h2 {
+    font-size: 1.85rem;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
 }
 
 .section-subtitle {
-    color: #718096;
-    margin-bottom: 25px;
-    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
 }
 
-/* Hero */
+/* Hero Frame Area (With subtle interactive dynamic lift) */
 .hero-section {
-    background-color: var(--light-bg);
-    padding: 80px 0;
-    border-bottom: 1px solid var(--border-color);
+    background-color: transparent;
+    padding: 100px 0;
+    position: relative;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 5px;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 8px;
 }
 
 .hero-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--accent-color);
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .department {
-    font-weight: bold;
-    color: #4a5568;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(59, 130, 246, 0.06);
+    padding: 4px 12px;
+    border-radius: 6px;
 }
 
 .hero-description {
-    max-width: 800px;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+    max-width: 760px;
+    font-size: 1.15rem;
+    color: #475569;
+    margin-bottom: 35px;
+    line-height: 1.7;
 }
 
-/* Buttons */
+/* ==========================================================================
+   Button Matrices
+   ========================================================================== */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     margin-right: 15px;
-    transition: background 0.2s;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     color: var(--white);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
 }
 
 .btn-primary:hover {
-    background-color: #102a43;
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: var(--white);
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
 .btn-secondary:hover {
-    background-color: #f0f4f8;
+    background-color: var(--light-bg);
+    border-color: #94a3b8;
+    transform: translateY(-2px);
 }
 
-/* Matrix Section */
+/* ==========================================================================
+   Profile Matrix / Specialties Configurations
+   ========================================================================== */
 .matrix-section {
-    background-color: var(--light-bg);
+    background-color: rgba(248, 250, 252, 0.6);
 }
 
 .matrix-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matrix-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
 }
 
 .matrix-card h3 {
     color: var(--primary-color);
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 8px;
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.15);
+    padding-bottom: 12px;
 }
 
 .specialties-list {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
 }
 
 .specialties-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 14px 16px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    font-weight: 500;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.specialties-list li:last-child {
-    border-bottom: none;
+/* Bullet list icon decoration markup */
+.specialties-list li::before {
+    content: "◈";
+    color: var(--accent-color);
+    font-size: 0.85rem;
 }
 
-/* Course Materials / Lecture Modules */
+.specialties-list li:hover {
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Course Materials / Lecture Modules Architecture
+   ========================================================================== */
 .lecture-modules {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .lecture-card {
@@ -207,67 +315,95 @@ body {
     align-items: center;
     background: var(--white);
     border: 1px solid var(--border-color);
-    padding: 20px;
-    border-radius: 6px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    transition: all 0.25s ease;
+}
+
+.lecture-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    transform: translateY(-2px);
 }
 
 .lecture-tag {
-    background: #edf2f7;
-    color: var(--primary-color);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .lecture-card h4 {
-    color: var(--text-color);
-    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
 }
 
 .lecture-actions {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .btn-download, .btn-stream {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn-download {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--white);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.btn-download:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
 }
 
 .btn-stream {
-    background-color: #edf2f7;
-    color: var(--text-color);
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
 }
 
-/* Footer */
+.btn-stream:hover {
+    background-color: #e2e8f0;
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Footer & Responsive Structural Media Breakpoints
+   ========================================================================== */
 .site-footer {
     background: var(--primary-color);
-    color: var(--white);
+    color: #94a3b8;
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 0;
     font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive */
+.site-footer p {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Viewports Optimization */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        gap: 15px;
-    }
-    .lecture-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-}

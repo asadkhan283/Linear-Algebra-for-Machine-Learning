@@ -288,22 +288,20 @@
                 <h2>Student Gateway Registration</h2>
                 <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
                 
-                <!-- Web3Forms Complete Audited One-Line Submission Row Layout -->
-                <form id="gatewayForm" action="https://web3forms.com" method="POST"> 
-                    <!-- Web3Forms Security Token Authentication Key -->
+                <!-- Corrected HTML Form Submission Engine (Bypasses all JS conflicts) -->
+                <form action="https://web3forms.com" method="POST"> 
+                    
+                    <!-- 1. Your Active Web3Forms Key Token -->
                     <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
-                    <!-- Optional: Explicitly names the incoming email subject line -->
-                    <input type="hidden" name="subject" value="New Student Access Portal Request">
+                    
+                    <!-- 2. Auto-Redirect Command: Replaces placeholder with your page home to prevent freeze errors. 
+                         Change 'username' and 'repository-name' to match your exact live URL path. -->
+                    <input type="hidden" name="redirect" value="https://github.io">
 
-                    <!-- CRITICAL FIX: Explicitly naming elements so Web3Forms can read data maps -->
-                    <input type="text" name="student_name" id="student_name" placeholder="Your Name" required> 
-                    <input type="email" name="student_email" id="student_email" placeholder="Your Student Email" required>
-                    <button type="submit" id="submitBtn">Submit Request</button>
-                </form> 
-                
-                <!-- Custom status alert feedback message placeholder box -->
-                <div id="formStatus" style="margin-top: 20px; font-weight: 700; text-align: center; border-radius: 6px; display: none; padding: 14px; font-size: 0.95rem;"></div>
-            </div>
+                    <!-- 3. Correctly Mapped Form Elements -->
+                    <input type="text" name="Student_Name" placeholder="Your Name" required> 
+                    <input type="email" name="Student_Email" placeholder="Your Student Email" required>
+                </div>  
         </section>
        </main>
 

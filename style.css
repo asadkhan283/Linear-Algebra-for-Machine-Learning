@@ -1,22 +1,23 @@
 /* ==========================================================================
-   OFFICIAL UNIVERSITY FACULTY SPECIFICATION — SUNSET TWILIGHT THEME
+   OFFICIAL UNIVERSITY FACULTY SPECIFICATION — NEON MATRIX CYBERPUNK
    ========================================================================== */
 :root {
-    /* Institutional Sunset Palette Matrix */
-    --primary-bg: #090916;          /* Deep dusk horizon base canvas */
-    --primary-color: #121026;       /* Midnight violet container backgrounds */
-    --text-color: #fdf8f5;          /* Warm off-white high-contrast typography */
-    --text-muted: #f4a261;         /* Soft amber twilight secondary text */
-    --accent-color: #e76f51;        /* High-Definition vibrant sunset crimson highlight */
-    --accent-purple: #8a5a8a;       /* Deep twilight violet layout anchor */
-    --border-color: rgba(231, 111, 81, 0.15);
+    /* Main Dark Theme Canvas */
+    --primary-bg: #030708;          /* Absolute obsidian dark cyber canvas */
+    --primary-color: #091115;       /* Matrix-toned dark container blocks */
+    --text-color: #f1f5f9;          /* High-visibility crisp silver white text */
+    --text-muted: #a7f3d0;         /* Subdued electric mint secondary text */
+    --accent-color: #10b981;        /* High-Definition vibrant electric lime/emerald glow */
+    --accent-purple: #a855f7;       /* Cyber terminal neon purple highlight layer */
+    --border-color: rgba(16, 185, 129, 0.15);
     --white: #ffffff;
     
-    /* Executive Glassmorphic Scaling Matrices */
-    --glass-bg: rgba(18, 16, 38, 0.7);
+    /* 3D Glassmorphism HD Glowing Layers */
+    --glass-bg: rgba(9, 17, 21, 0.7);
     --glass-border: rgba(255, 255, 255, 0.05);
-    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    --neon-glow: 0 0 20px rgba(231, 111, 81, 0.25);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    --neon-glow: 0 0 20px rgba(16, 185, 129, 0.25);
+    --purple-glow: 0 0 20px rgba(168, 85, 247, 0.2);
 }
 
 /* Base Core Structural Reset Layout Engine */
@@ -40,16 +41,16 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     
-    /* Highly attractive fluid shifting sunset aura ambient lighting layers */
+    /* Highly attractive fluid shifting mixed neon shades ambient aura lights */
     background-image: 
-        radial-gradient(at 0% 10%, rgba(231, 111, 81, 0.12) 0px, transparent 45%),    /* Crimson Horizon */
-        radial-gradient(at 100% 90%, rgba(244, 162, 97, 0.08) 0px, transparent 40%),  /* Soft Amber Afterglow */
-        radial-gradient(at 50% 40%, rgba(18, 16, 38, 0.6) 0px, transparent 60%);       /* Twilight Shadow */
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 45%),       /* Glowing Electric Lime */
+        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.08) 0px, transparent 40%),  /* Cyber Neon Purple */
+        radial-gradient(at 50% 50%, rgba(9, 17, 21, 0.6) 0px, transparent 60%);        /* Deep Matrix Slate */
     background-size: 200% 200%;
-    animation: sunsetAuraMovement 20s ease-in-out infinite alternate;
+    animation: cyberGlowMovement 20s ease-in-out infinite alternate;
 }
 
-@keyframes sunsetAuraMovement {
+@keyframes cyberGlowMovement {
     0% { background-position: 0% 20%; }
     50% { background-position: 100% 80%; }
     100% { background-position: 20% 50%; }
@@ -76,14 +77,14 @@ body {
    Institutional Sticky Header Dashboard Navigation
    ========================================================================== */
 .site-header {
-    background-color: rgba(9, 9, 22, 0.8);
+    background-color: rgba(3, 7, 8, 0.8);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .header-container {
@@ -103,7 +104,7 @@ body {
 
 .avatar-badge {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-color));
-    color: #090916;
+    color: #030708;
     font-weight: 800;
     width: 44px;
     height: 44px;
@@ -143,7 +144,7 @@ body {
 
 .main-nav a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(231, 111, 81, 0.5);
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
 }
 
 /* Hover Accent Line Slider Effect */
@@ -155,7 +156,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--accent-color), var(--text-muted));
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -209,7 +210,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
-    text-shadow: 0 0 12px rgba(231, 111, 81, 0.2);
+    text-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
 }
 
 .department {
@@ -219,10 +220,10 @@ h2 {
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(231, 111, 81, 0.08);
+    background: rgba(16, 185, 129, 0.08);
     padding: 6px 16px;
     border-radius: 20px;
-    border: 1px solid rgba(231, 111, 81, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -260,17 +261,17 @@ h2 {
 }
 
 .btn-primary, button[type="submit"] {
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-color));
-    color: var(--white);
+    background: linear-gradient(135deg, #047857, var(--accent-color));
+    color: #030708;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 14px rgba(231, 111, 81, 0.25);
+    box-shadow: var(--neon-glow);
 }
 
 .btn-primary:hover, button[type="submit"]:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(231, 111, 81, 0.4);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
     filter: brightness(1.1);
-    color: var(--white);
+    color: #030708;
 }
 
 .btn-secondary {
@@ -280,14 +281,14 @@ h2 {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(231, 111, 81, 0.05);
+    background-color: rgba(16, 185, 129, 0.05);
     border-color: var(--accent-color);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
-   Faculty Profile Matrix & Specialized Card Structures
+   Faculty Profile Matrix & Specialized Card Structures (Glowing Bounds)
    ========================================================================== */
 .matrix-card {
     background: var(--glass-bg);
@@ -305,15 +306,15 @@ h2 {
 
 .matrix-card:hover {
     transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
-    border-color: rgba(231, 111, 81, 0.25);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(231, 111, 81, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(16, 185, 129, 0.15);
 }
 
 .matrix-card h3 {
     color: var(--white);
     font-size: 1.4rem;
     margin-bottom: 24px;
-    border-bottom: 2px solid rgba(231, 111, 81, 0.2);
+    border-bottom: 2px solid rgba(16, 185, 129, 0.2);
     padding-bottom: 12px;
 }
 
@@ -338,26 +339,23 @@ h2 {
 }
 
 .specialties-list li::before {
-    content: "☀️";
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    text-shadow: 0 0 8px var(--text-muted);
+    content: "⚡";
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-shadow: var(--neon-glow);
 }
 
 .specialties-list li:hover {
     border-color: var(--accent-color);
-    background: rgba(231, 111, 81, 0.04);
+    background: rgba(16, 185, 129, 0.04);
     color: var(--white);
     transform: translateX(6px);
+    box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.1);
 }
 
 /* ==========================================================================
    Web3Forms Protected Dynamic Token Communication Interface Form
    ========================================================================== */
 form {
-    background: rgba(18, 16, 38, 0.5); 
+    background: rgba(9, 17, 21, 0.5); 
     border: 1px solid var(--glass-border);
-    padding: 30px;
-    border-radius: 16px;
-    max-width: 500px;
-    margin-top: 20px;

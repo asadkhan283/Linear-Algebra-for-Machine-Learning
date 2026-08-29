@@ -282,24 +282,27 @@
  
                 </div>
             </section>
-      <!-- Student Gateway Registration Section -->
-      <section id="contact" class="section contact-section">
+             <!-- Student Gateway Registration Section -->
+        <section id="contact" class="section contact-section">
             <div class="container">
                 <h2>Student Gateway Registration</h2>
                 <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
                 
-                <!-- Web3Forms One-Line Submission Row Layout -->
-                <form id="gatewayForm"> 
+                <!-- Web3Forms Complete Audited One-Line Submission Row Layout -->
+                <form id="gatewayForm" action="https://web3forms.com" method="POST"> 
                     <!-- Web3Forms Security Token Authentication Key -->
                     <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
+                    <!-- Optional: Explicitly names the incoming email subject line -->
+                    <input type="hidden" name="subject" value="New Student Access Portal Request">
 
-                    <input type="text" name="name" placeholder="Your Name" required> 
-                    <input type="email" name="email" placeholder="Your Student Email" required>
+                    <!-- CRITICAL FIX: Explicitly naming elements so Web3Forms can read data maps -->
+                    <input type="text" name="student_name" id="student_name" placeholder="Your Name" required> 
+                    <input type="email" name="student_email" id="student_email" placeholder="Your Student Email" required>
                     <button type="submit" id="submitBtn">Submit Request</button>
                 </form> 
                 
                 <!-- Custom status alert feedback message placeholder box -->
-                <div id="formStatus" style="margin-top: 15px; font-weight: 700; text-align: center; border-radius: 6px; display: none; padding: 12px;"></div>
+                <div id="formStatus" style="margin-top: 20px; font-weight: 700; text-align: center; border-radius: 6px; display: none; padding: 14px; font-size: 0.95rem;"></div>
             </div>
         </section>
        </main>

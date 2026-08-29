@@ -1,25 +1,25 @@
 /* ==========================================================================
-   Premium Academic 3D HD Light Theme — Light Purple & Pastel Orchid Edition
+   OFFICIAL UNIVERSITY FACULTY SPECIFICATION — SUNSET TWILIGHT THEME
    ========================================================================== */
 :root {
-    /* Main Light Theme Canvas */
-    --primary-bg: #f9f8fc;          /* Crisp clean lavender-white cream base */
-    --primary-color: #ffffff;       /* Solid pristine white container core */
-    --accent-color: #8b5cf6;        /* Bright professional light violet highlight */
-    --accent-purple: #c084fc;       /* Secondary soft pastel orchid accent layer */
-    --text-color: #2e1065;          /* Ultra-dark royal amethyst for high text contrast */
-    --text-muted: #6d28d9;         /* Sophisticated deep violet for secondary text */
-    --border-color: rgba(139, 92, 246, 0.12);
+    /* Institutional Sunset Palette Matrix */
+    --primary-bg: #090916;          /* Deep dusk horizon base canvas */
+    --primary-color: #121026;       /* Midnight violet container backgrounds */
+    --text-color: #fdf8f5;          /* Warm off-white high-contrast typography */
+    --text-muted: #f4a261;         /* Soft amber twilight secondary text */
+    --accent-color: #e76f51;        /* High-Definition vibrant sunset crimson highlight */
+    --accent-purple: #8a5a8a;       /* Deep twilight violet layout anchor */
+    --border-color: rgba(231, 111, 81, 0.15);
     --white: #ffffff;
     
-    /* 3D Glassmorphism HD Layers */
-    --glass-bg: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(139, 92, 246, 0.08);
-    --glass-shadow: 0 15px 35px rgba(46, 16, 101, 0.04);
-    --neon-glow: 0 0 20px rgba(139, 92, 246, 0.15);
+    /* Executive Glassmorphic Scaling Matrices */
+    --glass-bg: rgba(18, 16, 38, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    --neon-glow: 0 0 20px rgba(231, 111, 81, 0.25);
 }
 
-/* Base Reset & Smooth 3D Layering */
+/* Base Core Structural Reset Layout Engine */
 * {
     margin: 0;
     padding: 0;
@@ -40,22 +40,22 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     
-    /* Highly attractive fluid shifting pastel purple ambient aura lights */
+    /* Highly attractive fluid shifting sunset aura ambient lighting layers */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(192, 132, 252, 0.15) 0px, transparent 45%),
-        radial-gradient(at 100% 100%, rgba(232, 121, 249, 0.1) 0px, transparent 40%),
-        radial-gradient(at 50% 50%, rgba(249, 248, 252, 0.5) 0px, transparent 60%);
+        radial-gradient(at 0% 10%, rgba(231, 111, 81, 0.12) 0px, transparent 45%),    /* Crimson Horizon */
+        radial-gradient(at 100% 90%, rgba(244, 162, 97, 0.08) 0px, transparent 40%),  /* Soft Amber Afterglow */
+        radial-gradient(at 50% 40%, rgba(18, 16, 38, 0.6) 0px, transparent 60%);       /* Twilight Shadow */
     background-size: 200% 200%;
-    animation: lightPurpleAura 20s ease-in-out infinite alternate;
+    animation: sunsetAuraMovement 20s ease-in-out infinite alternate;
 }
 
-@keyframes lightPurpleAura {
+@keyframes sunsetAuraMovement {
     0% { background-position: 0% 20%; }
     50% { background-position: 100% 80%; }
     100% { background-position: 20% 50%; }
 }
 
-/* 3D Canvas Background Anchor */
+/* 3D Canvas Background Layer Positioning */
 #canvas-container {
     position: fixed;
     top: 0;
@@ -73,17 +73,17 @@ body {
 }
 
 /* ==========================================================================
-   Header Navigation Dashboard (Frosted Glass Layer)
+   Institutional Sticky Header Dashboard Navigation
    ========================================================================== */
 .site-header {
-    background-color: rgba(249, 248, 252, 0.8);
+    background-color: rgba(9, 9, 22, 0.8);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(46, 16, 101, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .header-container {
@@ -102,8 +102,8 @@ body {
 }
 
 .avatar-badge {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
-    color: var(--white);
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-color));
+    color: #090916;
     font-weight: 800;
     width: 44px;
     height: 44px;
@@ -114,13 +114,15 @@ body {
     box-shadow: var(--neon-glow);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .faculty-name {
     font-weight: 700;
     font-size: 1.15rem;
-    color: var(--text-color);
+    color: var(--white);
     letter-spacing: -0.3px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 .main-nav ul {
@@ -131,7 +133,7 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #6b21a8;
+    color: var(--text-muted);
     font-size: 0.95rem;
     font-weight: 600;
     padding: 6px 0;
@@ -141,9 +143,10 @@ body {
 
 .main-nav a:hover {
     color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
+    text-shadow: 0 0 8px rgba(231, 111, 81, 0.5);
 }
 
+/* Hover Accent Line Slider Effect */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -152,7 +155,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
+    background: linear-gradient(90deg, var(--accent-color), var(--text-muted));
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -163,27 +166,27 @@ body {
 }
 
 /* ==========================================================================
-   Structural 3D Depth Card Blocks
+   Academic Section Framework Blocks
    ========================================================================== */
-.section {
+.section, #course-materials, #contact {
     padding: 80px 0;
 }
 
-.section h2 {
+h2 {
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--white);
     letter-spacing: -0.5px;
     margin-bottom: 6px;
     font-weight: 800;
 }
 
 .section-subtitle {
-    color: #5b21b6;
+    color: var(--text-muted);
     margin-bottom: 35px;
     font-size: 1.05rem;
 }
 
-/* Hero Display Frame */
+/* Hero Landing Zone Component Styling */
 .hero-section {
     padding: 120px 0;
     position: relative;
@@ -191,12 +194,12 @@ body {
 
 .hero-section h1 {
     font-size: 3.5rem;
-    color: var(--text-color);
+    color: var(--white);
     letter-spacing: -1.5px;
     line-height: 1.15;
     margin-bottom: 12px;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--text-color) 60%, var(--text-muted) 100%);
+    background: linear-gradient(135deg, var(--white) 50%, var(--text-muted) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -206,6 +209,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
+    text-shadow: 0 0 12px rgba(231, 111, 81, 0.2);
 }
 
 .department {
@@ -215,10 +219,10 @@ body {
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(139, 92, 246, 0.06);
+    background: rgba(231, 111, 81, 0.08);
     padding: 6px 16px;
     border-radius: 20px;
-    border: 1px solid rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(231, 111, 81, 0.2);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -226,15 +230,22 @@ body {
 .hero-description {
     max-width: 760px;
     font-size: 1.2rem;
-    color: #4c1d95;
+    color: #cbd5e1;
     margin-bottom: 40px;
     line-height: 1.75;
 }
 
+.about-text {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    max-width: 850px;
+    line-height: 1.8;
+}
+
 /* ==========================================================================
-   HD Dynamic Control Matrices (Buttons)
+   Executive Functional Control Nodes (Action Buttons)
    ========================================================================== */
-.btn {
+.btn, button[type="submit"] {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 10px;
@@ -242,37 +253,41 @@ body {
     font-weight: 700;
     font-size: 0.95rem;
     margin-right: 15px;
+    border: none;
+    cursor: pointer;
     perspective: 1000px; 
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
+.btn-primary, button[type="submit"] {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-color));
     color: var(--white);
-    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 14px rgba(231, 111, 81, 0.25);
 }
 
-.btn-primary:hover {
+.btn-primary:hover, button[type="submit"]:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(192, 132, 252, 0.4);
-    filter: brightness(1.05);
+    box-shadow: 0 10px 25px rgba(231, 111, 81, 0.4);
+    filter: brightness(1.1);
+    color: var(--white);
 }
 
 .btn-secondary {
-    background-color: var(--white);
-    color: var(--text-color);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .btn-secondary:hover {
-    background-color: rgba(139, 92, 246, 0.03);
+    background-color: rgba(231, 111, 81, 0.05);
     border-color: var(--accent-color);
     transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ==========================================================================
-   Profile Matrix / Specialties Grid (Hyper-3D Glassmorphic Cards)
+   Faculty Profile Matrix & Specialized Card Structures
    ========================================================================== */
 .matrix-card {
     background: var(--glass-bg);
@@ -290,15 +305,15 @@ body {
 
 .matrix-card:hover {
     transform: translateY(-6px) rotateX(1deg) rotateY(1deg);
-    border-color: rgba(139, 92, 246, 0.2);
-    box-shadow: 0 20px 40px rgba(46, 16, 101, 0.06);
+    border-color: rgba(231, 111, 81, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(231, 111, 81, 0.1);
 }
 
 .matrix-card h3 {
-    color: var(--text-color);
+    color: var(--white);
     font-size: 1.4rem;
     margin-bottom: 24px;
-    border-bottom: 2px solid rgba(139, 92, 246, 0.1);
+    border-bottom: 2px solid rgba(231, 111, 81, 0.2);
     padding-bottom: 12px;
 }
 
@@ -311,72 +326,38 @@ body {
 
 .specialties-list li {
     padding: 16px 20px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 12px;
-    border: 1px solid rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     font-weight: 600;
-    color: #4c1d95;
+    color: #cbd5e1;
     display: flex;
     align-items: center;
     gap: 12px;
     transition: all 0.25s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
 }
 
 .specialties-list li::before {
-    content: "🔮";
-    font-size: 0.9rem;
+    content: "☀️";
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-shadow: 0 0 8px var(--text-muted);
 }
 
 .specialties-list li:hover {
     border-color: var(--accent-color);
-    background: rgba(139, 92, 246, 0.02);
-    color: var(--accent-color);
+    background: rgba(231, 111, 81, 0.04);
+    color: var(--white);
     transform: translateX(6px);
 }
 
 /* ==========================================================================
-   Course Repositories, Countdown Timer & Custom Element Nodes
+   Web3Forms Protected Dynamic Token Communication Interface Form
    ========================================================================== */
-.countdown-container { 
-    display: flex; 
-    gap: 15px; 
-    margin-top: 20px; 
-}
-
-.countdown-block {
-    background: var(--white); 
+form {
+    background: rgba(18, 16, 38, 0.5); 
     border: 1px solid var(--glass-border);
-    border-radius: 10px; 
-    padding: 15px; 
-    min-width: 80px; 
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
-}
-
-.countdown-block span { 
-    display: block; 
-    font-size: 1.8rem; 
-    font-weight: 800; 
-    color: var(--accent-color); 
-    font-family: monospace; 
-}
-
-.countdown-block label { 
-    font-size: 0.7rem; 
-    color: var(--text-muted); 
-    text-transform: uppercase; 
-    font-weight: 700; 
-}
-
-.form-group { 
-    margin-bottom: 18px; 
-    display: flex; 
-    flex-direction: column; 
-}
-
-.form-group label { 
-    font-weight: 700; 
-    margin-bottom: 8px; 
-    font-size: 0.85rem; 
-    color: #6d28d9; 
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 500px;
+    margin-top: 20px;

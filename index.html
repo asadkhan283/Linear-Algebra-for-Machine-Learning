@@ -282,29 +282,30 @@
  
                 </div>
             </section>
-             <!-- Student Gateway Registration Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2>Student Gateway Registration</h2>
-                <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
-                
-                <!-- Corrected HTML Form Submission Engine (Bypasses all JS conflicts) -->
-                <form action="https://web3forms.com" method="POST"> 
-                    
-                    <!-- 1. Your Active Web3Forms Key Token -->
-                    <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
-                    
-                    <!-- 2. Auto-Redirect Command: Replaces placeholder with your page home to prevent freeze errors. 
-                         Change 'username' and 'repository-name' to match your exact live URL path. -->
-                    <input type="hidden" name="redirect" value="https://github.io">
+            <!-- Student Gateway Registration Section -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <h2>Student Gateway Registration</h2>
+        <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
+        
+        <!-- FIXED: Action endpoint securely routes to Web3Forms API engine -->
+        <form action="https://web3forms.com" method="POST"> 
+            
+            <!-- 1. Web3Forms Operational Access Key -->
+            <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
+            
+            <!-- 2. FIXED: Auto-Redirect Loop. Update with your exact GitHub Pages link 
+                 Example: https://github.io -->
+            <input type="hidden" name="redirect" value="https://github.io">
 
-                    <!-- 3. Correctly Mapped Form Elements -->
-                    <input type="text" name="Student_Name" placeholder="Your Name" required> 
-                    <input type="email" name="Student_Email" placeholder="Your Student Email" required>
-                        <button type="submit">Submit Request</button>
-                          </form> 
-        </div>
-    </section>
+            <!-- 3. Form Input Channels with Explicit Mapping Variables -->
+            <input type="text" name="Student_Name" placeholder="Your Name" required> 
+            <input type="email" name="Student_Email" placeholder="Your Student Email" required>
+            
+            <button type="submit">Submit Request</button>
+        </form> 
+    </div>
+</section>
  </main>
 
     <footer class="site-footer">

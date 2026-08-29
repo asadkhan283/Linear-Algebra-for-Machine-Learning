@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OFFICIAL INSTITUTIONAL FACULTY PORTAL SPECIFICATION — EXECUTIVE BLUE & CRIMSON
+   OFFICIAL INSTITUTIONAL FACULTY PORTAL SPECIFICATION — ONE-LINE FORM EDITION
    ========================================================================== */
 :root {
     /* Academic Authority Palette Matrix */
@@ -100,7 +100,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px; /* High-end sharp institutional geometry */
+    border-radius: 6px; 
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
@@ -132,7 +132,6 @@ body {
     color: var(--accent-color);
 }
 
-/* Administrative Accent Underline Slider */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -172,7 +171,7 @@ h2 {
     font-size: 1.05rem;
 }
 
-/* Hero Profile Display Structure */
+/* Hero Landing Zone Component Styling */
 .hero-section {
     padding: 120px 0;
     position: relative;
@@ -229,7 +228,7 @@ h2 {
 /* ==========================================================================
    Executive Functional Control Nodes (Action Buttons)
    ========================================================================== */
-.btn, button[type="submit"] {
+.btn {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 6px;
@@ -242,13 +241,13 @@ h2 {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary, button[type="submit"] {
+.btn-primary {
     background: var(--accent-crimson);
     color: var(--white);
     box-shadow: 0 4px 14px rgba(127, 29, 29, 0.15);
 }
 
-.btn-primary:hover, button[type="submit"]:hover {
+.btn-primary:hover {
     background: #450a0a;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(69, 10, 10, 0.25);
@@ -266,7 +265,6 @@ h2 {
     background-color: var(--primary-bg);
     border-color: var(--accent-color);
     transform: translateY(-3px);
-} delta-wrapper
 }
 
 /* ==========================================================================
@@ -329,53 +327,51 @@ h2 {
 }
 
 /* ==========================================================================
-   Web3Forms Institutional Communication Interface Form
+   Web3Forms Professional One-Line Inline Registration Layout
    ========================================================================== */
 form {
     background: var(--white);
     border: 1px solid var(--border-color);
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    max-width: 100%;             /* Spans horizontally to balance layout views */
+    margin: 24px auto 0 auto;
     box-shadow: var(--glass-shadow);
+    
+    /* Forces child inputs to compile side-by-side */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
 }
 
 form input[type="text"], form input[type="email"] {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 16px;
+    flex: 2;                     /* Gives content boxes identical growing weights */
+    padding: 12px 16px;
+    margin-bottom: 0;            /* Overwrites previous margin blocks */
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     background: var(--primary-bg);
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 form input:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 0 12px rgba(30, 58, 138, 0.1);
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.08);
 }
 
 form button[type="submit"] {
-    width: 100%;
-    margin-right: 0;
+    flex: 1;                     /* Snaps action trigger cleanly to the right */
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: var(--accent-crimson);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(127, 29, 29, 0.1);
+    height: 100%;
+    white-space: nowrap;         /* Guarantees "Submit" text never breaks onto two lines */
 }
 
-/* ==========================================================================
-   Course Curriculum Repositories & Lecture Card Configurations
-   ========================================================================== */
-.lecture-modules {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 24px;
-}
-
-.lecture-card {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    background: var(--white); 

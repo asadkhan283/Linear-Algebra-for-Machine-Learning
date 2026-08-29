@@ -282,25 +282,26 @@
  
                 </div>
             </section>
-            <!-- Student Gateway Registration Section -->
+           <!-- Student Gateway Registration Section -->
 <section id="contact" class="section contact-section">
     <div class="container">
         <h2>Student Gateway Registration</h2>
         <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
         
-        <!-- FIXED: Action endpoint securely routes to Web3Forms API engine -->
+        <!-- Stable HTML Form Submission Engine -->
         <form action="https://web3forms.com" method="POST"> 
             
-            <!-- 1. Web3Forms Operational Access Key -->
-            <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
+            <!-- 1. Active Web3Forms Access Token -->
+            <input type="hidden" name="access_key" value="7070702f-8fb2-4623-92d3-3207532de415"> 
             
-            <!-- 2. FIXED: Auto-Redirect Loop. Update with your exact GitHub Pages link 
-                 Example: https://github.io -->
+            <!-- 2. Auto-Redirect Hook: Refreshes back to your website home directory after clicking submit.
+                 Replace 'username' and 'repository-name' with your exact live URL path. -->
             <input type="hidden" name="redirect" value="https://github.io">
 
-            <!-- 3. Form Input Channels with Explicit Mapping Variables -->
-            <input type="text" name="Student_Name" placeholder="Your Name" required> 
-            <input type="email" name="Student_Email" placeholder="Your Student Email" required>
+            <!-- 3. Form input channels with explicit mapping fields -->
+            <input type="text" name="name" placeholder="Your Name" required> 
+            <input type="email" name="email" placeholder="Your Student Email" required>
+            <textarea name="message" placeholder="State your request reason (e.g., Requesting access for Week 1 notes)" required></textarea>
             
             <button type="submit">Submit Request</button>
         </form> 

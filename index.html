@@ -281,17 +281,19 @@
                     </div>  
  
                 </div>
-
  </section>
-        <!-- Student Gateway Registration Section -->
+ <!-- Student Gateway Registration Section -->
         <section id="contact" class="section contact-section">
             <div class="container">
                 <h2>Student Gateway Registration</h2>
                 <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
                 
                 <!-- Web3Forms One-Line Submission Row Layout -->
-                <form action="https://web3forms.com" method="POST"> 
+                <form action="https://web3forms.com" method="POST" id="gatewayForm"> 
                     <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> 
+                    <!-- Redirect Feature to refresh the dashboard immediately after submission -->
+                    <input type="hidden" name="redirect" value="https://github.io">
+
                     <input type="text" name="name" placeholder="Your Name" required> 
                     <input type="email" name="email" placeholder="Your Student Email" required>
                     <button type="submit">Submit Request</button>

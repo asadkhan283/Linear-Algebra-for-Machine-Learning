@@ -288,14 +288,70 @@
         <h2>Student Gateway Registration</h2>
         <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
         
-        <!-- Stable HTML Form Submission Engine -->
-       <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="7070702f-8fb2-4623-92d3-3207532de415">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
+        <!-- Stable Web3Forms Submission Engine -->
+        <form action="https://api.web3forms.com/submit" method="POST"> 
+            <!-- 1. Active Web3Forms Access Token -->
+            <input type="hidden" name="access_key" value="7070702f-8fb2-4623-92d3-3207532de415"> 
+            
+            <!-- 2. Auto-Redirect Hook: Updates back to your portal homepage after submission -->
+            <input type="hidden" name="redirect" value="https://github.io">
+
+            <!-- 3. Form Input Field Channels -->
+            <input type="text" name="name" placeholder="Your Name" required> 
+            <input type="email" name="email" placeholder="Your Student Email" required>
+            <textarea name="message" placeholder="State your reason (e.g., Requesting 48-hour access window for Week 1 notes)" required></textarea>
+            
+            <button type="submit">Submit Request</button>
+        </form> 
+    </div>
+</section>
+
+<!-- 48-HOUR AUTOMATED EXSPIRATION GATEWAY SCRIPT -->
+<script>
+    document.querySelectorAll('.btn-download').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Halt immediate raw browser file downloading
+            const fileUrl = this.getAttribute('href');
+            
+            // Define your master classroom password phrase here (Case-Sensitive)
+            const masterPasscode = "Math2026"; 
+            
+            // Time configurations: 48 Hours converted into milliseconds
+            const fortyEightHours = 48 * 60 * 60 * 1000; 
+            const now = new Date().getTime();
+
+            // Check browser storage for previous login timestamp milestones
+            const storedTimestamp = localStorage.getItem('portalLoginTime');
+            const storedToken = localStorage.getItem('portalAccessToken');
+
+            // Verify if user is within the legal 48-hour permission threshold
+            if (storedToken === masterPasscode && storedTimestamp) {
+                if (now - parseInt(storedTimestamp) < fortyEightHours) {
+                    window.location.href = fileUrl; // Let verified student pass without asking again
+                    return;
+                } else {
+                    // 48 Hours completely ran out — enforce automated security wipe loop
+                    localStorage.removeItem('portalAccessToken');
+                    localStorage.removeItem('portalLoginTime');
+                    alert("🔒 ACCESS EXPIRED: Your 48-hour permission window has run out. Please re-register via the gateway below.");
+                }
+            }
+            // Challenge prompt for unverified or expired student entries
+            const studentInput = prompt("🔒 SECURE FACULTY PORTAL\nEnter your approved passcode to open a temporary 48-hour notes download stream:");
+
+            if (studentInput === masterPasscode) {
+                // Seal the current exact timestamp down to the millisecond into memory
+                localStorage.setItem('portalAccessToken', masterPasscode);
+                localStorage.setItem('portalLoginTime', now);
+                
+                alert("✅ Verification Successful. 48-hour temporary access window activated.");
+                window.location.href = fileUrl;
+            } else {
+                alert("❌ Verification Mismatch. Access Denied.\nSubmit the Gateway Registration form at the bottom of the page to request access credentials.");
+            }
+        });
+    });
+</script>
     </div>
 </section>
  </main>

@@ -289,22 +289,13 @@
         <p class="section-subtitle">Request access credentials for restricted notes and course repositories</p>
         
         <!-- Stable HTML Form Submission Engine -->
-        <form action="https://web3forms.com" method="POST"> 
-            
-            <!-- 1. Active Web3Forms Access Token -->
-            <input type="hidden" name="access_key" value="7070702f-8fb2-4623-92d3-3207532de415"> 
-            
-            <!-- 2. Auto-Redirect Hook: Refreshes back to your website home directory after clicking submit.
-                 Replace 'username' and 'repository-name' with your exact live URL path. -->
-            <input type="hidden" name="redirect" value="https://github.io">
-
-            <!-- 3. Form input channels with explicit mapping fields -->
-            <input type="text" name="name" placeholder="Your Name" required> 
-            <input type="email" name="email" placeholder="Your Student Email" required>
-            <textarea name="message" placeholder="State your request reason (e.g., Requesting access for Week 1 notes)" required></textarea>
-            
-            <button type="submit">Submit Request</button>
-        </form> 
+       <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="7070702f-8fb2-4623-92d3-3207532de415">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit Form</button>
+</form>
     </div>
 </section>
  </main>

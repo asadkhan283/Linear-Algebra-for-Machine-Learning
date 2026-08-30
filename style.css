@@ -1,21 +1,21 @@
 /* ==========================================================================
-   OFFICIAL INSTITUTIONAL FACULTY PORTAL SPECIFICATION — ONE-LINE FORM EDITION
+   OFFICIAL UNIVERSITY FACULTY MATRIX SPECIFICATION — PREMIUM ACADEMIC THEME
    ========================================================================== */
 :root {
-    /* Academic Authority Palette Matrix */
-    --primary-bg: #f8fafc;          /* High-clarity off-white ivory canvas backing */
-    --primary-color: #ffffff;       /* Pristine white structured data card units */
-    --text-color: #0f172a;          /* Prussian Navy for absolute reading authority */
-    --text-muted: #475569;         /* Professional slate grey for tertiary metadata */
+    /* Institutional Master Palette Customizations */
+    --primary-bg: #f8fafc;          /* High-clarity ivory/linen white backdrop */
+    --primary-color: #ffffff;       /* Pure white structural glass container blocks */
+    --text-color: #0f172a;          /* Deep imperial navy for absolute reading authority */
+    --text-muted: #475569;         /* Subdued slate grey for tertiary metadata */
     --accent-color: #1e3a8a;        /* Varsity royal blue university branding tone */
-    --accent-crimson: #7f1d1d;      /* Prestigious heritage crimson for primary actions */
+    --accent-gold: #b45309;         /* Prestigious polished amber/gold action anchor */
     --border-color: rgba(30, 58, 138, 0.08);
     --white: #ffffff;
     
-    /* Executive Glassmorphic Scaling Structural Parameters */
-    --glass-bg: rgba(255, 255, 255, 0.9);
+    /* Executive Glassmorphic Scaling Matrices */
+    --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(30, 58, 138, 0.06);
-    --glass-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+    --glass-shadow: 0 16px 36px rgba(15, 23, 42, 0.03);
 }
 
 /* Base Core Structural Reset Layout Engine */
@@ -37,15 +37,15 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     
-    /* Academic Vector Dot Matrix Grid — Simulates computational research graphs */
+    /* Highly attractive abstract mathematical blueprint overlay + lab ambient glow */
     background-image: 
-        radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.03) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(127, 29, 29, 0.01) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.04) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(180, 83, 9, 0.02) 0px, transparent 50%),
         radial-gradient(rgba(30, 58, 138, 0.02) 1.5px, transparent 1.5px);
-    background-size: 100% 100%, 100% 100%, 30px 30px; 
+    background-size: 100% 100%, 100% 100%, 30px 30px; /* 30px vector graph node alignment */
 }
 
-/* 3D Background Positioning Hook */
+/* 3D Canvas Background Layer Positioning */
 #canvas-container {
     position: fixed;
     top: 0;
@@ -66,14 +66,14 @@ body {
    Institutional Sticky Header Dashboard Navigation
    ========================================================================== */
 .site-header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 2px solid rgba(30, 58, 138, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.01);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
 }
 
 .header-container {
@@ -92,7 +92,7 @@ body {
 }
 
 .avatar-badge {
-    background: linear-gradient(135deg, var(--accent-color), var(--text-color));
+    background: linear-gradient(135deg, var(--accent-color), #0f172a);
     color: var(--white);
     font-weight: 700;
     width: 44px;
@@ -100,7 +100,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px; 
+    border-radius: 8px; /* Modern geometric squircle layout badge */
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
@@ -126,12 +126,14 @@ body {
     font-weight: 600;
     padding: 6px 0;
     position: relative;
+    transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
     color: var(--accent-color);
 }
 
+/* Hover Accent Line Slider Effect */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -140,7 +142,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-crimson);
+    background-color: var(--accent-gold);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -198,14 +200,14 @@ h2 {
 .department {
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--accent-crimson);
+    color: var(--accent-gold);
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    background: rgba(127, 29, 29, 0.05);
+    background: rgba(180, 83, 9, 0.05);
     padding: 6px 16px;
     border-radius: 4px;
-    border: 1px solid rgba(127, 29, 29, 0.15);
+    border: 1px solid rgba(180, 83, 9, 0.15);
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -228,7 +230,7 @@ h2 {
 /* ==========================================================================
    Executive Functional Control Nodes (Action Buttons)
    ========================================================================== */
-.btn {
+.btn, button[type="submit"] {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 6px;
@@ -241,16 +243,16 @@ h2 {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary {
-    background: var(--accent-crimson);
+.btn-primary, button[type="submit"] {
+    background: var(--accent-color);
     color: var(--white);
-    box-shadow: 0 4px 14px rgba(127, 29, 29, 0.15);
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.15);
 }
 
-.btn-primary:hover {
-    background: #450a0a;
+.btn-primary:hover, button[type="submit"]:hover {
+    background: #0f172a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(69, 10, 10, 0.25);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
     color: var(--white);
 }
 
@@ -283,8 +285,8 @@ h2 {
 
 .matrix-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(30, 58, 138, 0.12);
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.03);
+    border-color: rgba(30, 58, 138, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
 }
 
 .matrix-card h3 {
@@ -316,9 +318,9 @@ h2 {
 
 .specialties-list li::before {
     content: "■";
-    color: var(--accent-crimson);
+    color: var(--accent-gold);
     font-size: 0.75rem;
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 .specialties-list li:hover {
@@ -327,51 +329,58 @@ h2 {
 }
 
 /* ==========================================================================
-   Web3Forms Professional One-Line Inline Registration Layout
+   Course Curriculum Repositories & Lecture Card Configurations
    ========================================================================== */
-form {
-    background: var(--white);
-    border: 1px solid var(--border-color);
-    padding: 16px 20px;
-    border-radius: 8px;
-    max-width: 100%;             /* Spans horizontally to balance layout views */
-    margin: 24px auto 0 auto;
-    box-shadow: var(--glass-shadow);
-    
-    /* Forces child inputs to compile side-by-side */
+.lecture-modules {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.lecture-card {
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+    background: var(--white); 
+    border: 1px solid var(--glass-border);
+    padding: 24px 30px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+    transition: all 0.25s ease;
 }
 
-form input[type="text"], form input[type="email"] {
-    flex: 2;                     /* Gives content boxes identical growing weights */
-    padding: 12px 16px;
-    margin-bottom: 0;            /* Overwrites previous margin blocks */
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background: var(--primary-bg);
-    color: var(--text-color);
-    font-size: 0.95rem;
-    outline: none;
+.lecture-card:hover {
+    border-color: rgba(30, 58, 138, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.02);
 }
 
-form input:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 8px rgba(30, 58, 138, 0.08);
+.lecture-tag {
+    background: rgba(30, 58, 138, 0.04); 
+    color: var(--accent-color);
+    padding: 3px 10px; 
+    border-radius: 4px; 
+    font-size: 0.7rem; 
+    font-weight: 800; 
+    text-transform: uppercase;
+    border: 1px solid rgba(30, 58, 138, 0.08);
 }
 
-form button[type="submit"] {
-    flex: 1;                     /* Snaps action trigger cleanly to the right */
-    padding: 12px 24px;
-    border-radius: 6px;
+.lecture-card h4 {
+    color: var(--text-color); 
+    font-size: 1.15rem; 
+    margin-top: 5px; 
+    font-weight: 600; 
+}
+
+.lecture-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-download, .btn-stream {
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 700;
-    font-size: 0.95rem;
-    background: var(--accent-crimson);
-    color: var(--white);
-    box-shadow: 0 2px 8px rgba(127, 29, 29, 0.1);
-    height: 100%;
-    white-space: nowrap;         /* Guarantees "Submit" text never breaks onto two lines */
-}
-
+    padding: 10px 20px;
